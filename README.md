@@ -1,36 +1,29 @@
 # Sistema de restaurante
 
-Aplicación de escritorio Java Swing para administrar clientes, empleados, pedidos y menú.
+Aplicación Java Swing de restaurante con pantallas de clientes, empleados, menú y pedidos. Conserva los metadatos del trabajo académico original.
 
-Proyecto académico de BUAP. Proyecto final seleccionado.
+## Requisitos
 
-## Documentación y requisitos
+JDK 17, NetBeans o Ant y AbsoluteLayout.jar de NetBeans en lib/.
 
+## Ejecutar
 
+Abre la carpeta en NetBeans o ejecuta `ant jar`. El inicio es `Interfaces2.InterfazRestaurante2`.
 
-## Tecnologías y archivos
+Para probar el modelo en PowerShell:
 
-Extensiones de código: .java, .xml.
+```powershell
+New-Item -ItemType Directory build/test-classes -Force | Out-Null
+$fuentes = (Get-ChildItem src -Recurse -Filter *.java).FullName
+javac -encoding UTF-8 -cp "lib/*" -d build/test-classes $fuentes tests/ModelCheck.java
+Set-Location build/test-classes
+java -cp ".;../../lib/*" ModelCheck
+```
 
-## Ejecución
+## Verificación del 8 de octubre de 2026
 
-Abrir la carpeta con Apache NetBeans. Revisar las dependencias en `nbproject/project.properties` y ajustar las rutas locales de bibliotecas si corresponde.
+Construcción JAR con Ant e imágenes referenciadas verificadas. La prueba comprueba el cálculo desde el archivo solicitado y la escritura de pedidos. Se corrigieron ambos fallos. No se recorrieron todas las pantallas de escritorio ni sus operaciones de usuario.
 
-Clases con método `main`:
+## Versiones anteriores
 
-- `Dialogos.Ayuda`
-- `Dialogos.DialogoInfoRestauran2`
-- `Dialogos.D_Cajero`
-- `Interfaces2.InterfazRestaurante2`
-- `Dialogos.Ayuda`
-- `Dialogos.DialogoInfoRestauran2`
-- `Dialogos.D_Cajero`
-- `Interfaces2.InterfazRestaurante2`
-
-## Contenido publicado
-
-Se conserva el código y los recursos referenciados. Se excluyen dependencias instaladas, resultados de compilación, configuraciones personales, documentos ajenos al programa y datos locales.
-
-## Estado
-
-Archivo académico original. Puede contener operaciones pendientes o dependencias antiguas. No se ha verificado la ejecución de todos los programas.
+versiones/ conserva variantes académicas anteriores. Las pruebas descritas corresponden al código principal; no se garantiza que todas las variantes funcionen.

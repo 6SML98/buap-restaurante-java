@@ -29,7 +29,7 @@ public void agregarPlaillo() {
     try {
         File archivo = new File("Orden.txt");
         FileWriter escritor = new FileWriter(archivo, true);
-        Scanner scanner = new Scanner(System.in);
+        escritor.write(elemento + "," + precio + System.lineSeparator());
 
         escritor.close();
         System.out.println("Plato agregado correctamente.");
@@ -58,7 +58,7 @@ public void agregarPlaillo() {
     public double calcularTotal(String rutaArchivo) {
         double total = 0.0;
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("Orden.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(rutaArchivo))) {
             String linea;
             while ((linea = reader.readLine()) != null) {
                 String[] elementos = linea.split(",");
