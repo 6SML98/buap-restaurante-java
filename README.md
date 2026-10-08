@@ -1,4 +1,10 @@
-# Restaurante ProyectoAD
+# Sistema de restaurante
+
+Aplicación de escritorio Java Swing para administrar clientes, empleados, pedidos y menú.
+
+Proyecto académico de BUAP. Proyecto final seleccionado.
+
+## Documentación y requisitos
 
 Proyecto o conjunto de prácticas académicas de BUAP. Se publica como parte del archivo de trabajos de `6SML98`.
 
