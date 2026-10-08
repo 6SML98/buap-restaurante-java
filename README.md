@@ -16,6 +16,10 @@ Clases con método `main`:
 - `Dialogos.DialogoInfoRestauran2`
 - `Dialogos.D_Cajero`
 - `Interfaces2.InterfazRestaurante2`
+- `Dialogos.Ayuda`
+- `Dialogos.DialogoInfoRestauran2`
+- `Dialogos.D_Cajero`
+- `Interfaces2.InterfazRestaurante2`
 
 ## Contenido publicado
 
